@@ -159,6 +159,7 @@ public class OsmandMapTileView implements IMapDownloaderCallback {
 	private TwoFingerTapDetector twoFingersTapDetector;
 	//private boolean afterTwoFingersTap = false;
 	private boolean afterDoubleTap = false;
+	private boolean wasMapLinkedBeforeGesture = false;
 
 	public OsmandMapTileView(MapActivity activity, int w, int h) {
 		this.activity = activity;
@@ -166,7 +167,7 @@ public class OsmandMapTileView implements IMapDownloaderCallback {
 	}
 
 	// ///////////////////////////// INITIALIZING UI PART ///////////////////////////////////
-	public void init(MapActivity ctx, int w, int h) {
+	public void init(final MapActivity ctx, int w, int h) {
 		application = (OsmandApplication) ctx.getApplicationContext();
 		settings = application.getSettings();
 
@@ -221,6 +222,9 @@ public class OsmandMapTileView implements IMapDownloaderCallback {
 				//afterTwoFingersTap = true;
 				if (isZoomingAllowed(getZoom(), -1.1f)) {
 					getAnimatedDraggingThread().startZooming(getZoom() - 1, currentViewport.getZoomFloatPart(), false);
+					if (wasMapLinkedBeforeGesture) {
+						ctx.getMapViewTrackingUtilities().setMapLinkedToLocation(true);
+					}
 				}
 			}
 		};
@@ -1079,6 +1083,8 @@ public class OsmandMapTileView implements IMapDownloaderCallback {
 	private class MapTileViewOnGestureListener extends SimpleOnGestureListener {
 		@Override
 		public boolean onDown(MotionEvent e) {
+			// Facilitates better map re-linking for two finger tap zoom out
+			wasMapLinkedBeforeGesture = ((MapActivity) activity).getMapViewTrackingUtilities().isMapLinkedToLocation();
 			return false;
 		}
 
