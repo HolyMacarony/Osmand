@@ -962,7 +962,7 @@ Karten-Kacheln können direkt online bezogen werden, und werden im OsmAnd-Untero
 	<string name="filter_current_poiButton">Filtern</string>
 	
 	<string name="edit_filter_save_as_menu_item">Speichern als</string>
-	<string name="edit_filter_delete_dialog_title">Ausgewählten Filter wirklich löschen?</string>
+	<string name="edit_filter_delete_dialog_title">Ausgewählten Filter löschen?</string>
 	<string name="edit_filter_delete_message">Der Filter {0} wurde gelöscht</string>
 	<string name="edit_filter_create_message">Der Filter {0} wurde erstellt</string>
 	
@@ -2117,8 +2117,8 @@ Lon %2$s</string>
     <string name="shared_string_upload">Hochladen</string>
     <string name="shared_string_qr_code">QR-Code</string>
     <string name="map_downloaded">Karte heruntergeladen</string>
-    <string name="map_downloaded_descr">Karte von %1$s wurde heruntergeladen. Gehen Sie zur Karte, um sie zu benutzen.</string>
-    <string name="go_to_map">Zur Karte gehen</string>
+    <string name="map_downloaded_descr">Die Karte von %1$s wurde heruntergeladen und kann nun benutzt werden.</string>
+    <string name="go_to_map">Karte anzeigen</string>
     <string name="lang_nds">Plattdeutsch</string>
     <string name="lang_mk">Mazedonisch</string>
     <string name="read_more">Weiter lesen</string>
@@ -2498,7 +2498,7 @@ Wenn Sie OsmAnd und OSM lieben und unterstützen wollen, so ist dies die perfekt
     <string name="clear_tile_data">Alle Kartenkacheln löschen</string>
     <string name="skip_map_downloading_desc">Es sind keine Offlinekarten installiert. Sie können jetzt eine Karte auswählen oder später Karten über “Menü - %1$s“ herunterladen.</string>
     <string name="search_another_country">Eine andere Region auswählen</string>
-    <string name="search_map">Karte wird gesucht…</string>
+    <string name="search_map">Karten werden gesucht…</string>
     <string name="first_usage_wizard_desc">Lassen Sie OsmAnd Ihren Standort bestimmen und Karten für diese Region zum Herunterladen vorschlagen.</string>
     <string name="location_not_found">Position nicht gefunden</string>
     <string name="no_inet_connection">Keine Internetverbindung</string>
